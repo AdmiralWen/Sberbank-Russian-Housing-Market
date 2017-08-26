@@ -1,0 +1,62 @@
+Variables with no variance:
+"culture_objects_top_25_raion"
+"oil_chemistry_raion"
+"railroad_terminal_raion"
+"nuclear_reactor_raion"
+"build_count_foam"
+"big_road1_1line"
+"railroad_1line"
+"office_sqm_500"
+"trc_sqm_500"
+"cafe_count_500_price_4000"
+"cafe_count_500_price_high"
+"mosque_count_500"
+"leisure_count_500"
+"office_sqm_1000"
+"trc_sqm_1000"
+"cafe_count_1000_price_high"
+"mosque_count_1000"
+"cafe_count_1500_price_high"
+"mosque_count_1500"
+"cafe_count_2000_price_high"
+
+
+Remove "id" variables:
+"id"
+"id_metro"
+"id_railroad_station_walk"
+"id_railroad_station_avto"
+"id_big_road1"
+"id_big_road2"
+"id_railroad_terminal"
+"id_bus_terminal"
+
+
+Data quality checks:
+- Replace state = 33 with 3.
+- build_year variable has an erronous 20052009 -> replace with 2005?
+- build_year further cleaning:
+	rus$build_year[rus$build_year == "20052009"] <- "2005"
+	rus$build_year[rus$build_year == "0"] <- NA
+	rus$build_year[rus$build_year == "1"] <- NA
+	rus$build_year[rus$build_year == "20"] <- "2000"
+	rus$build_year[rus$build_year == "215"] <- "2015"
+	rus$build_year[rus$build_year == "3"] <- NA
+	rus$build_year[rus$build_year == "4965"] <- NA
+	rus$build_year[rus$build_year == "71"] <- 1971
+- material = 3 also seems to be an error.
+
+
+Feature engineering: https://www.kaggle.com/arathee2/creating-some-useful-additional-features/notebook
+- Build year
+- Years old
+- Non-residential area to living area ratio
+- Work share ratio
+- Average Room Area = train['life_sq'] / train['num_room']
+- Apartment_Name = all_data.sub_area + all_data['metro_km_avto'].astype(str); possibly merge with year-month
+- Binaries:
+	- If max_floor > x
+	- If population > x
+
+
+Features and cleaning tracker: https://www.kaggle.com/philippsp/an-updated-collection-of-new-features/notebook
