@@ -1,9 +1,11 @@
 # Sberbank Russian Housing Market Kaggle Competition
+#### Author: Brandon Wen
 
-Brandon Wen
+Directory:
+- Data - Contains training and testing datasets used for the competition.
+- Submissions - Final submission files.
+- 1. EDA.ipynb - Exploratory Data Analysis, first look at data.
+- 2. Feature Engineering.py - Feature engineering step, pulling in insight from EDA step.
+- 3. XGB.py - Train XGBoost model, create submission files.
 
-1st Edit (Test)
-
-This is another commit - pull this to local and test (2nd Edit).
-
-Yet another pull test (3rd Edit).
+Note: Make sure top run the files in order.
