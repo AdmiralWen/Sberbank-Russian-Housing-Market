@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-project_dir = "C:/Users/Brandon T. Wen/OneDrive/Kaggle/Sberbank Russian Housing Market/Sberbank Russian Housing Market"
+project_dir = os.path.expanduser('~') + "/OneDrive/Kaggle/Sberbank Russian Housing Market/Sberbank Russian Housing Market"
 import xgboost as xgb
 
 ##########################################################
