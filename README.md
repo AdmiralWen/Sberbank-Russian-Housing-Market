@@ -8,4 +8,4 @@ Directory:
 - _2. Feature Engineering.py_ - Feature engineering step, pulling in insight from EDA step.
 - _3. XGB.py_ - Train XGBoost model, create submission files.
 
-Note: Make sure top run the files in order.
+Note: Make sure to run _2. Feature Engineering.py_ before _3. XGB.py_, as the XGB script uses the results from Feature Engineering.
