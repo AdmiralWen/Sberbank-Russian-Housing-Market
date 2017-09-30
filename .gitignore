@@ -1,2 +1,3 @@
 *.pyproj
+*.pyproj.user
 .ipynb_checkpoints
